@@ -1,0 +1,16 @@
+{
+  "name": "skejjo-dev",
+  "private": true,
+  "scripts": {
+    "dev": "hugo server --disableFastRender",
+    "build:hugo": "hugo --gc --minify",
+    "build:search": "pagefind --site public --glob \"**/*.html\"",
+    "build": "npm run build:hugo && npm run build:search"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "latest",
+    "pagefind": "latest",
+    "postcss": "latest",
+    "postcss-cli": "latest"
+  }
+}

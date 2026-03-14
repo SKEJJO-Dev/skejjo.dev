@@ -1,47 +1,5 @@
-# =============================================================================
-# Operating System Files
-# =============================================================================
-
-# -----------------------------------------------------------------------------
-# macOS
-# -----------------------------------------------------------------------------
-.DS_Store
-.DS_Store?
-.AppleDouble
-.LSOverride
-._*
-.Spotlight-V100
-.Trashes
-.VolumeIcon.icns
-.com.apple.timemachine.donotpresent
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
-
-# -----------------------------------------------------------------------------
-# Windows
-# -----------------------------------------------------------------------------
-Thumbs.db
-Thumbs.db:encryptable
-ehthumbs.db
-ehthumbs_vista.db
-*.stackdump
-[Dd]esktop.ini
-$RECYCLE.BIN/
-*.cab
-*.msi
-*.msix
-*.msm
-*.msp
-*.lnk
-
-# -----------------------------------------------------------------------------
-# Linux
-# -----------------------------------------------------------------------------
-*~
-.fuse_hidden*
-.directory
-.Trash-*
-.nfs*
+/.hugo_build.lock
+/hugo_stats.json
+/node_modules
+/public
+/resources

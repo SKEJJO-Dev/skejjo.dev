@@ -1,0 +1,22 @@
+{{ define "main" }}
+<section class="section">
+  <div class="container">
+    <div class="row">
+      {{ range .Pages }}
+      {{ if .Params.categories }}
+    <div class="col-lg-4 col-sm-6 mb-4">
+        {{ partial "components/post-card.html" . }}
+    </div>
+      {{else}}
+      <div class="col-lg-2 col-md-3 col-md-4 mb-4 text-center">
+        <a href="{{ .Permalink }}" class="text-text-dark dark:text-darkmode-text-dark  text-xl card p-2">
+          {{ .Title }}
+        </a>
+      </div>
+      {{ end }}
+
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

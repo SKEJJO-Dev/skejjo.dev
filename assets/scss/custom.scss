@@ -1,0 +1,41 @@
+.search-shell {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 18px;
+  box-shadow: 0 24px 60px rgba(48, 48, 50, 0.08);
+  padding: 2rem;
+}
+
+.pagefind-ui__search-input {
+  border-radius: 999px;
+  min-height: 60px;
+  padding-inline: 1.5rem;
+}
+
+.pagefind-ui__drawer {
+  margin-top: 1.5rem;
+}
+
+.pagefind-ui__result {
+  border-top: 1px solid #e5e5e5;
+  padding-block: 1.5rem;
+}
+
+.pagefind-ui__result-link {
+  color: #303032;
+  font-weight: 700;
+}
+
+.pagefind-ui__result-link:hover {
+  color: #e84444;
+}
+
+.pagefind-ui__button {
+  border-radius: 999px;
+}
+
+@media (max-width: 767px) {
+  .search-shell {
+    padding: 1.25rem;
+  }
+}
