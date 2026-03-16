@@ -12,6 +12,9 @@ npm-debug.log
 yarn.lock
 package-lock.json
 
+# Hugo generated
+assets/jsconfig.json
+
 # =============================================================================
 # Operating System Files
 # =============================================================================
