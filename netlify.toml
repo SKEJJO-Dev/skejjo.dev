@@ -1,0 +1,12 @@
+[build]
+publish = "public"
+command = "npm install && hugo --gc --minify && npx pagefind --site public"
+
+[build.environment]
+HUGO_VERSION = "0.147.2"
+GO_VERSION = "1.24.1"
+NODE_VERSION = "20"
+HUGO_BASEURL = "/"
+GIT_SUBMODULE_STRATEGY = "recursive"
+GONOSUMDB = "*"
+GOFLAGS = "-mod=mod"

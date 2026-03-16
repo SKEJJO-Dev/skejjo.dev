@@ -1,0 +1,120 @@
+#################### default parameters ################################
+# favicon
+favicon = "images/favicon.png"
+# logo
+logo = "images/logo.png"
+logo_footer = "images/logo-footer.png"
+# use `px` or `x` with logo_width, example: "100px".
+# Note: logo_width is not work with .svg file
+logo_footer_width = "180px"
+logo_width = "110px"
+# if logo_webp set false, will not generate WEBP version of logo | default is true
+logo_webp = false
+# logo text will only show when logo is missing.
+logo_text = "SKEJJO"
+# purgeCSS
+purge_css = true
+# Main Sections
+mainSections = ["blog"]
+# image gallery shortcode
+image_gallery = true
+# contact form action
+contact_form_action = "#" # contact form works with [https://airform.io/] or [https://formspree.io]
+# google tag manager, see https://developers.google.com/tag-manager/
+google_adsense = "" # example: ca-pub-xxxxxxxxxxxxxxxx
+google_tag_manager = "" # example: G-XXXXXXXXXX
+# custom script on header, example: custom_script= "<script>console.log(\"Hello World\")</script>"
+custom_script = ""
+# copyright
+copyright = "Copyright &copy; SKEJJO Consulting"
+theme_copyright = false
+
+# footer content
+footer_content = "We provide expert consulting services to help your business grow and succeed."
+
+
+# Preloader
+[preloader]
+enable = false
+preloader = "" # use jpg, png, svg or gif format.
+
+# Navigation button
+[navigation_button]
+enable = true
+label = "get a quote"
+link = "contact"
+
+# contact info
+[contact_info]
+address = "Canada"
+email = "info@skejjo.dev"
+mobile = ""
+
+# Subscription
+[subscription]
+enable = false
+
+# Crisp Chat
+[crisp_chat]
+enable = false
+crisp_website_id = ""
+
+# seo meta data for OpenGraph / Twitter Card
+[metadata]
+author = "SKEJJO Consulting"
+description = "SKEJJO Consulting - Expert business consulting services"
+image = "images/favicon.png" # this image will be used as fallback if a page has no image of its own
+bg_image = "images/background/page-title.jpg" # this image will be used as fallback if a page has no image of its own
+keywords = ["Consulting", "Business", "SKEJJO"]
+
+# matomo tracking: see https://matomo.org/
+[matomo]
+enable = false
+id = ""
+url = ""
+
+# baidu analytics: see https://tongji.baidu.com/
+[baidu]
+analytics_id = ""
+enable = false
+
+# plausible analytics: see https://plausible.io/
+[plausible]
+domain = ""
+enable = false
+
+# counter analytics: see https://counter.dev/setup.html
+[counter]
+enable = false
+username = ""
+
+# site verifications
+[site_verification]
+baidu = ""
+bing = ""
+facebook = ""
+google = ""
+mastodon = ""
+
+# google map
+[google_map]
+enable = false
+address = ""
+
+# cookies
+[cookies]
+button = "I Accept"
+content = "This site uses cookies. By continuing to use this website, you agree to their use."
+enable = false
+expire_days = 2
+
+############################# social site ########################
+[[social]]
+icon = "ti-linkedin" # themify icon pack : https://themify.me/themify-icons
+link = "#"
+title = "linkedin"
+
+[[social]]
+icon = "ti-github" # themify icon pack : https://themify.me/themify-icons
+link = "#"
+title = "github"

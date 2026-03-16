@@ -1,0 +1,3 @@
+[submodule "themes/biztrox-hugo-theme"]
+	path = themes/biztrox-hugo-theme
+	url = https://github.com/SKEJJO-Dev/biztrox-hugo-theme.git
