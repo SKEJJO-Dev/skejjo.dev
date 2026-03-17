@@ -1,4 +1,21 @@
 # =============================================================================
+# Hugo Build Artifacts
+# =============================================================================
+public/
+resources/_gen/
+.hugo_build.lock
+hugo_stats.json
+
+# Node.js
+node_modules/
+npm-debug.log
+yarn.lock
+package-lock.json
+
+# Hugo generated
+assets/jsconfig.json
+
+# =============================================================================
 # Operating System Files
 # =============================================================================
 
