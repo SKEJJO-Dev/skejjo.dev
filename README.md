@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2b25ac44-1951-4481-ba9f-d1384b7e0598/deploy-status)](https://app.netlify.com/projects/skejjodev/deploys)
+
 # Skejjo Hugo Site
 
 This repository contains a Hugo site built on the `darkrise-hugo` theme and prepared for Netlify deployment with:
