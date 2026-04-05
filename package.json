@@ -1,0 +1,26 @@
+{
+  "name": "skejjo-dev",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A Netlify-ready Hugo site using the Darkrise theme, Pagefind, and Decap CMS.",
+  "scripts": {
+    "dev": "hugo server --buildDrafts --disableFastRender --forceSyncStatic",
+    "build:hugo": "hugo --gc --minify --environment production --forceSyncStatic",
+    "build:search": "pagefind --site public",
+    "build": "npm run build:hugo && npm run build:search",
+    "preview": "hugo server --environment production --disableFastRender --forceSyncStatic",
+    "format": "prettier -w ."
+  },
+  "dependencies": {
+    "@tailwindcss/forms": "^0.5.10",
+    "@tailwindcss/typography": "^0.5.18",
+    "tailwindcss": "^4.1.13"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.13",
+    "pagefind": "1.4.0",
+    "prettier": "^3.6.2",
+    "prettier-plugin-go-template": "0.0.15",
+    "prettier-plugin-tailwindcss": "^0.6.14"
+  }
+}

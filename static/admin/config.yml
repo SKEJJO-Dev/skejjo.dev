@@ -1,0 +1,135 @@
+# Enable Netlify Identity and Git Gateway in the Netlify dashboard to use this backend in production.
+backend:
+  name: git-gateway
+  branch: main
+
+local_backend: true
+publish_mode: editorial_workflow
+media_folder: static/images/uploads
+public_folder: /images/uploads
+
+collections:
+  - name: home
+    label: Homepage
+    files:
+      - label: Landing Page
+        name: landing_page
+        file: content/english/_index.md
+        fields:
+          - label: Banner
+            name: banner
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Content, name: content, widget: text }
+              - { label: Note, name: note, widget: string, required: false }
+              - label: Image
+                name: image
+                widget: object
+                fields:
+                  - { label: Source, name: src, widget: image }
+                  - { label: Alt Text, name: alt, widget: string }
+              - label: Buttons
+                name: buttons
+                widget: list
+                summary: "{{fields.label}} -> {{fields.link}}"
+                fields:
+                  - { label: Label, name: label, widget: string }
+                  - { label: Enabled, name: enable, widget: boolean, default: true }
+                  - { label: Link, name: link, widget: string }
+              - label: Highlights
+                name: list
+                widget: list
+                field: { label: Highlight, name: item, widget: string }
+          - label: Customer Logos
+            name: customer_logos
+            widget: object
+            fields:
+              - { label: Enabled, name: enable, widget: boolean, default: true }
+          - label: Features Section
+            name: features
+            widget: object
+            fields:
+              - { label: Enabled, name: enable, widget: boolean, default: true }
+          - label: Feature Cards Section
+            name: feature_cards
+            widget: object
+            fields:
+              - { label: Enabled, name: enable, widget: boolean, default: true }
+          - label: Integrations Section
+            name: integration
+            widget: object
+            fields:
+              - { label: Enabled, name: enable, widget: boolean, default: true }
+          - label: Testimonials Section
+            name: testimonials
+            widget: object
+            fields:
+              - { label: Enabled, name: enable, widget: boolean, default: true }
+          - label: Call To Action Section
+            name: call_to_action
+            widget: object
+            fields:
+              - { label: Enabled, name: enable, widget: boolean, default: true }
+
+  - name: blog
+    label: Blog Posts
+    label_singular: Blog Post
+    folder: content/english/blog
+    create: true
+    extension: md
+    slug: "{{slug}}"
+    summary: "{{title}}"
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Meta Title, name: meta_title, widget: string, required: false }
+      - { label: Description, name: description, widget: text }
+      - { label: Publish Date, name: date, widget: datetime }
+      - { label: Cover Image, name: image, widget: image }
+      - { label: Featured Post, name: featured, widget: boolean, default: false }
+      - { label: Draft, name: draft, widget: boolean, default: false }
+      - { label: Body, name: body, widget: markdown }
+
+  - name: integrations
+    label: Integrations
+    label_singular: Integration
+    folder: content/english/integration
+    create: true
+    extension: md
+    slug: "{{slug}}"
+    summary: "{{title}}"
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Image, name: image, widget: image }
+      - { label: Description, name: description, widget: text }
+      - { label: Category, name: social, widget: string, required: false }
+      - label: Button
+        name: button
+        widget: object
+        fields:
+          - { label: Enabled, name: enable, widget: boolean, default: true }
+          - { label: Label, name: label, widget: string }
+          - { label: Link, name: link, widget: string }
+      - { label: Draft, name: draft, widget: boolean, default: false }
+      - { label: Body, name: body, widget: markdown }
+
+  - name: changelog
+    label: Changelog
+    files:
+      - label: Release Notes
+        name: releases
+        file: content/english/changelog/_index.md
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Description, name: description, widget: text, required: false }
+          - { label: Meta Title, name: meta_title, widget: string, required: false }
+          - label: Releases
+            name: list
+            widget: list
+            summary: "{{fields.version}} - {{fields.title}}"
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Date, name: date, widget: string }
+              - { label: Version, name: version, widget: string }
+              - { label: Notes, name: content, widget: markdown }
+          - { label: Draft, name: draft, widget: boolean, default: false }

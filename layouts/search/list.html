@@ -1,0 +1,89 @@
+{{ define "head" }}
+  <style>
+    .search-shell {
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(10, 14, 23, 0.72);
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
+    }
+
+    .search-field {
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .search-field:focus {
+      border-color: rgba(248, 113, 113, 0.8);
+      outline: none;
+      box-shadow: 0 0 0 4px rgba(248, 113, 113, 0.15);
+    }
+
+    .search-result {
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.03);
+      transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease;
+    }
+
+    .search-result:hover {
+      transform: translateY(-2px);
+      border-color: rgba(248, 113, 113, 0.4);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .search-status[data-tone="error"] {
+      color: rgb(252 165 165);
+    }
+  </style>
+{{ end }}
+
+{{ define "main" }}
+  <section class="section overflow-hidden">
+    <div class="container">
+      <div class="mx-auto max-w-[900px] py-20">
+        {{ partial "page-header" . }}
+
+        <div class="search-shell mt-12 rounded-[32px] p-5 md:p-8" data-aos="fade-up-sm">
+          <form class="space-y-4" data-pagefind-form>
+            <div class="space-y-2">
+              <label class="text-sm font-semibold uppercase tracking-[0.2em] opacity-60" for="site-search">
+                Search the site
+              </label>
+              <div class="flex flex-col gap-3 md:flex-row">
+                <input
+                  id="site-search"
+                  class="search-field min-h-14 w-full rounded-2xl px-5 text-base text-white placeholder:text-white/45"
+                  type="search"
+                  name="q"
+                  placeholder="Search posts, pages, and integrations"
+                  autocomplete="off"
+                  data-pagefind-input />
+                <button class="btn btn-primary min-h-14 shrink-0 justify-center rounded-2xl px-8" type="submit">
+                  Search
+                </button>
+              </div>
+            </div>
+            <p class="search-status text-sm opacity-70" data-pagefind-status>
+              Search runs entirely in the browser with a static Pagefind index.
+            </p>
+          </form>
+        </div>
+
+        <div class="mt-8 space-y-4" data-pagefind-results></div>
+      </div>
+    </div>
+  </section>
+{{ end }}
+
+{{ define "body_end" }}
+  {{ $script := resources.Get "js/pagefind-search.js" }}
+  {{ if hugo.IsProduction }}
+    {{ $script = $script | minify | fingerprint }}
+  {{ end }}
+  <script
+    type="module"
+    crossorigin="anonymous"
+    src="{{ $script.RelPermalink }}"
+    integrity="{{ $script.Data.Integrity }}"></script>
+{{ end }}

@@ -74,3 +74,14 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# =============================================================================
+# Project
+# =============================================================================
+
+node_modules/
+public/
+resources/_gen/
+.hugo_build.lock
+.netlify/
+hugo_stats.json
