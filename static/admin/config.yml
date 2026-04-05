@@ -46,21 +46,6 @@ collections:
             widget: object
             fields:
               - { label: Enabled, name: enable, widget: boolean, default: true }
-          - label: Features Section
-            name: features
-            widget: object
-            fields:
-              - { label: Enabled, name: enable, widget: boolean, default: true }
-          - label: Feature Cards Section
-            name: feature_cards
-            widget: object
-            fields:
-              - { label: Enabled, name: enable, widget: boolean, default: true }
-          - label: Integrations Section
-            name: integration
-            widget: object
-            fields:
-              - { label: Enabled, name: enable, widget: boolean, default: true }
           - label: Testimonials Section
             name: testimonials
             widget: object
@@ -87,29 +72,6 @@ collections:
       - { label: Publish Date, name: date, widget: datetime }
       - { label: Cover Image, name: image, widget: image }
       - { label: Featured Post, name: featured, widget: boolean, default: false }
-      - { label: Draft, name: draft, widget: boolean, default: false }
-      - { label: Body, name: body, widget: markdown }
-
-  - name: integrations
-    label: Integrations
-    label_singular: Integration
-    folder: content/english/integration
-    create: true
-    extension: md
-    slug: "{{slug}}"
-    summary: "{{title}}"
-    fields:
-      - { label: Title, name: title, widget: string }
-      - { label: Image, name: image, widget: image }
-      - { label: Description, name: description, widget: text }
-      - { label: Category, name: social, widget: string, required: false }
-      - label: Button
-        name: button
-        widget: object
-        fields:
-          - { label: Enabled, name: enable, widget: boolean, default: true }
-          - { label: Label, name: label, widget: string }
-          - { label: Link, name: link, widget: string }
       - { label: Draft, name: draft, widget: boolean, default: false }
       - { label: Body, name: body, widget: markdown }
 

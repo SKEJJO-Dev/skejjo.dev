@@ -22,13 +22,13 @@ customer_logos:
   enable: true
 
 features:
-  enable: true
+  enable: false
 
 feature_cards:
-  enable: true
+  enable: false
 
 integration:
-  enable: true
+  enable: false
 
 testimonials:
   enable: true

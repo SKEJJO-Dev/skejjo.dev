@@ -8,24 +8,14 @@ weight = 1
 
 
 [[main]]
-name = "Integrations"
-url = "/integration/"
-weight = 2
-
-[[main]]
-name = "Pricing"
-url = "/pricing/"
-weight = 3
-
-[[main]]
 name = "Contact"
 url = "/contact/"
-weight = 4
+weight = 2
 
 [[main]]
 name = "Search"
 url = "/search/"
-weight = 5
+weight = 3
 
 
 [[main]]
@@ -61,16 +51,6 @@ url = "/about/"
 # parent = "Essentials"
 # name = "Integrations"
 # url = "/integration/"
-
-[[main]]
-parent = "Essentials"
-name = "Integrations Details"
-url = "/integration/intercom/"
-
-[[main]]
-parent = "Essentials"
-name = "Feature"
-url = "/feature/"
 
 [[main]]
 parent = "Essentials"
@@ -129,33 +109,12 @@ name = "About"
 url = "/about/"
 
 [[company]]
-name = "Product Features"
-url = "/feature/"
-
-[[company]]
 name = "Changelog"
 url = "/changelog/"
 
 [[company]]
 name = "Contact"
 url = "/contact/"
-
-# product menu
-[[product]]
-name = "Pricing & Plans"
-url = "/pricing/"
-
-[[product]]
-name = "Product Features"
-url = "/feature/"
-
-[[product]]
-name = "Integration"
-url = "/integration/"
-
-[[product]]
-name = "Integration Details"
-url = "/integration/kickstarter/"
 
 # resources menu
 [[resources]]

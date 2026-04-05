@@ -5,74 +5,78 @@
         {{ partial "image" (dict "Src" site.Params.logo "Alt" "logo" "Size" "225x48") }}
 
       </div>
-      <div class="sm:col-6 md:col-auto">
-        <h3 class="mb-8 text-base tracking-none text-white/50">
-          {{ T "company" }}
-        </h3>
-        <ul class="flex flex-col gap-3">
-          {{ range site.Menus.company }}
-            <li>
-              <a
-                class="font-medium transition text-text/90 hover:text-text/60"
-                href="{{ .URL }}">
-                {{ .Name }}
-              </a>
-            </li>
-          {{ end }}
-
-        </ul>
-      </div>
-      <div class="sm:col-6 md:col-auto">
-        <h3 class="mb-8 text-base tracking-none text-white/50">
-          {{ T "product" }}
-        </h3>
-        <ul class="flex flex-col gap-3">
-          {{ range site.Menus.product }}
-            <li>
-              <a
-                class="font-medium transition text-text/90 hover:text-text/60"
-                href="{{ .URL }}">
-                {{ .Name }}
-              </a>
-            </li>
-          {{ end }}
-
-        </ul>
-      </div>
-      <div class="sm:col-6 md:col-auto">
-        <h3 class="mb-8 text-base tracking-none text-white/50">
-          {{ T "resources" }}
-        </h3>
-        <ul class="flex flex-col gap-3">
-          {{ range site.Menus.resources }}
-            <li>
-              <a
-                class="font-medium transition text-text/90 hover:text-text/60"
-                href="{{ .URL }}">
-                {{ .Name }}
-              </a>
-            </li>
-          {{ end }}
-
-        </ul>
-      </div>
-      <div class="sm:col-6 md:col-auto">
-        <h3 class="mb-8 text-base tracking-none text-white/50">
-          {{ T "services" }}
-        </h3>
-        <ul class="flex flex-col gap-3">
-          {{ range site.Menus.services }}
-            <li>
-              <a
-                class="font-medium transition text-text/90 hover:text-text/60"
-                href="{{ .URL }}">
-                {{ .Name }}
-              </a>
-            </li>
-          {{ end }}
-
-        </ul>
-      </div>
+      {{ if site.Menus.company }}
+        <div class="sm:col-6 md:col-auto">
+          <h3 class="mb-8 text-base tracking-none text-white/50">
+            {{ T "company" }}
+          </h3>
+          <ul class="flex flex-col gap-3">
+            {{ range site.Menus.company }}
+              <li>
+                <a
+                  class="font-medium transition text-text/90 hover:text-text/60"
+                  href="{{ .URL }}">
+                  {{ .Name }}
+                </a>
+              </li>
+            {{ end }}
+          </ul>
+        </div>
+      {{ end }}
+      {{ if site.Menus.product }}
+        <div class="sm:col-6 md:col-auto">
+          <h3 class="mb-8 text-base tracking-none text-white/50">
+            {{ T "product" }}
+          </h3>
+          <ul class="flex flex-col gap-3">
+            {{ range site.Menus.product }}
+              <li>
+                <a
+                  class="font-medium transition text-text/90 hover:text-text/60"
+                  href="{{ .URL }}">
+                  {{ .Name }}
+                </a>
+              </li>
+            {{ end }}
+          </ul>
+        </div>
+      {{ end }}
+      {{ if site.Menus.resources }}
+        <div class="sm:col-6 md:col-auto">
+          <h3 class="mb-8 text-base tracking-none text-white/50">
+            {{ T "resources" }}
+          </h3>
+          <ul class="flex flex-col gap-3">
+            {{ range site.Menus.resources }}
+              <li>
+                <a
+                  class="font-medium transition text-text/90 hover:text-text/60"
+                  href="{{ .URL }}">
+                  {{ .Name }}
+                </a>
+              </li>
+            {{ end }}
+          </ul>
+        </div>
+      {{ end }}
+      {{ if site.Menus.services }}
+        <div class="sm:col-6 md:col-auto">
+          <h3 class="mb-8 text-base tracking-none text-white/50">
+            {{ T "services" }}
+          </h3>
+          <ul class="flex flex-col gap-3">
+            {{ range site.Menus.services }}
+              <li>
+                <a
+                  class="font-medium transition text-text/90 hover:text-text/60"
+                  href="{{ .URL }}">
+                  {{ .Name }}
+                </a>
+              </li>
+            {{ end }}
+          </ul>
+        </div>
+      {{ end }}
 
       <div class="col-12 pt-5 md:pt-20">
         <div
