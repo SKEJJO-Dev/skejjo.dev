@@ -2,14 +2,14 @@
 # favicon module: https://github.com/gethugothemes/hugo-modules/tree/master/images#favicon-implementation
 favicon = "images/favicon.png"
 # logo module: https://github.com/gethugothemes/hugo-modules/tree/master/images#logo-implementation
-logo = "images/logo.svg"
+logo = "images/logo.png"
 
 # use `px` or `x` with logo_width, example: "100px".
 # Note: logo_width is not work with .svg file
-logo_width = "124px"
-logo_height = "26px"
+logo_width = "240px"
+logo_height = "90px"
 # if logo_webp set false, will not generate WEBP version of logo | default is true
-logo_webp = true
+logo_webp = false
 # logo text will only show when logo is missing.
 logo_text = "Skejjo"
 # navbar fixed to top
@@ -46,7 +46,7 @@ link = "/contact/"
 # search module: https://github.com/gethugothemes/hugo-modules/tree/master/search
 [search]
 enable = true
-primary_color = "#121212"
+primary_color = "#9e1c33"
 include_sections = ["blog"]
 show_image = true
 show_description = true

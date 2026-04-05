@@ -1,0 +1,13 @@
+{{ $alt := printf "%s logo" (site.Title | default site.Params.logo_text) }}
+{{ with resources.Get site.Params.logo }}
+  <span class="site-brand" aria-label="{{ $alt }}">
+    <img
+      src="{{ .RelPermalink }}"
+      alt="{{ $alt }}"
+      width="{{ .Width }}"
+      height="{{ .Height }}"
+      class="site-brand__image" />
+  </span>
+{{ else }}
+  <span class="site-brand site-brand--text">{{ site.Params.logo_text | default site.Title }}</span>
+{{ end }}

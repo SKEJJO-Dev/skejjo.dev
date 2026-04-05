@@ -53,7 +53,7 @@ if (!form || !input || !results || !status) {
               <p class="text-xs font-semibold uppercase tracking-[0.18em] text-white/50">Search Result</p>
               <h2 class="mt-2 text-2xl font-semibold text-white">${title}</h2>
               <p class="mt-3 text-base text-white/70">${excerpt}</p>
-              <span class="mt-5 inline-flex items-center text-sm font-semibold text-red-300">
+              <span class="mt-5 inline-flex items-center text-sm font-semibold text-secondary">
                 Open page
               </span>
             </a>
